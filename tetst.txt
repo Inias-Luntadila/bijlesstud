@@ -1,0 +1,10 @@
+Ip-addres : 193.168.16.156
+poort: 22345
+
+maak een user aan genaamd pieter , dat het script /etc/backup.sh
+
+zorg dat packages automatisch worden geupdate.
+
+zor
+
+

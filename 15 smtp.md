@@ -1,4 +1,6 @@
-# SSH daemon configuration
+# SMTP
+
+https://wiki.uclllabs.be/index.php/SaSM_Lab_smtp
 
 ## Important folders
 

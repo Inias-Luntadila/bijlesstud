@@ -10,6 +10,17 @@ Install and configure an IMAP server and make sure it meets the following specif
 
 ## Important folders
 
+    /etc/dovecot/dovecot.conf
+
+    /etc/dovecot/conf.d
+        /etc/dovecot/conf.d/10-ssl.conf
+        /etc/dovecot/conf.d/10-master.conf
+        /etc/dovecot/conf.d/10-logging.conf
+
+    /etc/dovecot/master-users
+
+    /var/log/dovecot.log
+
 ## Assignments
 
     To install and configure an IMAP server that meets your specifications, you can use Dovecot, a popular IMAP and POP3 server. Here's a short guide on how to do it:
@@ -309,13 +320,13 @@ Configuring a master user (sometimes referred to as an admin or service account)
 
 - To log in as the master user and access a user's mailbox, you use the master user's name and the target user's name, separated by the separator character (`*` in this case). Use an IMAP client or telnet/openssl for this. For instance, with `openssl`:
   ```sh
-  openssl s_client -connect slimme-rik.sasm.uclllabs.be:993
+  openssl s_client -connect ferre-verheyen.sasm.uclllabs.be:993
   ```
 - Then use the LOGIN command with the master user credentials and the user you want to access:
   ```sh
-  a login masteruser*user1@slimme-rik.sasm.uclllabs.be masterpassword
+  a login masteruser*user1@ferre-verheyen.sasm.uclllabs.be masterpassword
   ```
-- Replace `masteruser` with your master user's name, `masterpassword` with your master user's password, and `user1@slimme-rik.sasm.uclllabs.be` with the user whose mailbox you want to access.
+- Replace `masteruser` with your master user's name, `masterpassword` with your master user's password, and `user1@ferre-verheyen.sasm.uclllabs.be` with the user whose mailbox you want to access.
 
 ### **Important Security Notes:**
 
@@ -332,13 +343,13 @@ Accessing and reading mailboxes from other users as a master user in Dovecot inv
 
 - Use the `openssl` or `telnet` command to connect to your Dovecot server (depending on whether you're using SSL/TLS).
   ```sh
-  openssl s_client -connect slimme-rik.sasm.uclllabs.be:993
+  openssl s_client -connect ferre-verheyen.sasm.uclllabs.be:993
   ```
 - Log in with the master user's credentials, followed by the target user's username, separated by the master user separator (e.g., `*`).
   ```sh
-  a login masteruser*user1@slimme-rik.sasm.uclllabs.be masterpassword
+  a login masteruser*user1@ferre-verheyen.sasm.uclllabs.be masterpassword
   ```
-  Replace `masteruser` with the master user's username, `masterpassword` with the master user's password, and `user1@slimme-rik.sasm.uclllabs.be` with the username of the user whose mailbox you want to access.
+  Replace `masteruser` with the master user's username, `masterpassword` with the master user's password, and `user1@ferre-verheyen.sasm.uclllabs.be` with the username of the user whose mailbox you want to access.
 
 ### 2. **Select the Mailbox:**
 
